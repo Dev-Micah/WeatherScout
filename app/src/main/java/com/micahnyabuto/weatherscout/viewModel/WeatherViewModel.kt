@@ -27,11 +27,11 @@ class WeatherViewModel @Inject constructor(val currentWeatherRepo: CurrentWeathe
         }
     }
 }
-fun getForecastWeatherData(city:String){
-    _forecastWeatherStatus.postValue(NetworkResponse.Loading)
-    viewModelScope.launch {
-        currentWeatherRepo.getForecastWeather(city).collect{modelWeatherForecastResponse ->
-            _forecastWeatherStatus.postValue(modelWeatherForecastResponse)
-        }
-    }
-}
+//fun getForecastWeatherData(city:String){
+//    _forecastWeatherStatus.postValue(NetworkResponse.Loading)
+//    viewModelScope.launch {
+//        currentWeatherRepo.getForecastWeather(city).collect{modelWeatherForecastResponse ->
+//            _forecastWeatherStatus.postValue(modelWeatherForecastResponse)
+//        }
+//    }
+//}
