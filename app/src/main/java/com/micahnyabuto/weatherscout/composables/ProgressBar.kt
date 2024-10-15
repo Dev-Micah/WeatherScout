@@ -1,6 +1,6 @@
 package com.micahnyabuto.weatherscout.composables
 
-import android.widget.ProgressBar
+
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.CircularProgressIndicator
