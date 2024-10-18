@@ -30,7 +30,12 @@ fun ForecastWeatherDataSunMoon(data: ModelWeatherForecastResponse){
            horizontalArrangement = Arrangement.Center
        ) {
            element(
-               R.drawable.sunrise,"Sunset",
+               R.drawable.sunset,"Sunset",data.forecast.forecastday.get(0).astro.sunrise,modifier = Modifier.weight(0.5f),
+               tint =R.color.yellow
+           )
+           element(
+               R.drawable.sunset, "Sunset",data.forecast.forecastday.get(0).astro.sunset, modifier = Modifier.weight(0.5f),
+               tint =R.color.orange
            )
        }
     }
