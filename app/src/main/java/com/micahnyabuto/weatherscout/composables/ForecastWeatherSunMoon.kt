@@ -4,7 +4,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -26,7 +28,7 @@ fun ForecastWeatherDataSunMoon(data: ModelWeatherForecastResponse){
                    color = colorResource(id = R.color.bg),
                    shape = RoundedCornerShape(20.dp)
                ),
-           verticalAlignment = Alignment.CenterVertically ,
+           verticalAlignment = Alignment.CenterVertically,
            horizontalArrangement = Arrangement.Center
        ) {
            element(
@@ -38,6 +40,7 @@ fun ForecastWeatherDataSunMoon(data: ModelWeatherForecastResponse){
                tint =R.color.orange
            )
        }
+        Spacer(modifier = Modifier.height(20.dp))
     }
 
 }
