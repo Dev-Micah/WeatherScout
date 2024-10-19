@@ -19,28 +19,34 @@ import com.micahnyabuto.weatherscout.Model.forecast.ModelWeatherForecastResponse
 import com.micahnyabuto.weatherscout.R
 
 @Composable
-fun ForecastWeatherDataSunMoon(data: ModelWeatherForecastResponse){
+fun ForecastWeatherDataSunMoon(data: ModelWeatherForecastResponse) {
     Column {
-       Row(
-           modifier = Modifier
-               .fillMaxSize()
-               .padding(horizontal = 15.dp)
-               .background(
-                   color = colorResource(id = R.color.bg),
-                   shape = RoundedCornerShape(20.dp)
-               ),
-           verticalAlignment = Alignment.CenterVertically,
-           horizontalArrangement = Arrangement.Center
-       ) {
-           element(
-               R.drawable.sunset,"Sunset",data.forecast.forecastday.get(0).astro.sunrise,modifier = Modifier.weight(0.5f),
-               tint =R.color.yellow
-           )
-           element(
-               R.drawable.sunset, "Sunset",data.forecast.forecastday.get(0).astro.sunset, modifier = Modifier.weight(0.5f),
-               tint =R.color.orange
-           )
-       }
+        Row(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 15.dp)
+                .background(
+                    color = colorResource(id = R.color.bg),
+                    shape = RoundedCornerShape(20.dp)
+                ),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            element(
+                R.drawable.sunset,
+                "Sunset",
+                data.forecast.forecastday.get(0).astro.sunrise,
+                modifier = Modifier.weight(0.5f),
+                tint = R.color.yellow
+            )
+            element(
+                R.drawable.sunset,
+                "Sunset",
+                data.forecast.forecastday.get(0).astro.sunset,
+                modifier = Modifier.weight(0.5f),
+                tint = R.color.orange
+            )
+        }
         Spacer(modifier = Modifier.height(20.dp))
         Row(
             modifier = Modifier
@@ -52,13 +58,19 @@ fun ForecastWeatherDataSunMoon(data: ModelWeatherForecastResponse){
                 ),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
-        ){
+        ) {
             element(
-                R.drawable.moon_rais,"moonrise",data.forecast.forecastday.get(0).astro.moonrise, modifier = Modifier.weight(0.5f),
+                R.drawable.moon_rais,
+                "moonrise",
+                data.forecast.forecastday.get(0).astro.moonrise,
+                modifier = Modifier.weight(0.5f),
                 tint = R.color.limeGray
             )
             element(
-                R.drawable.moon_set,"moonset",data.forecast.forecastday.get(0).astro.moonset,modifier = Modifier.weight(0.5f),
+                R.drawable.moon_set,
+                "moonset",
+                data.forecast.forecastday.get(0).astro.moonset,
+                modifier = Modifier.weight(0.5f),
                 tint = R.color.lite_gray
 
             )
