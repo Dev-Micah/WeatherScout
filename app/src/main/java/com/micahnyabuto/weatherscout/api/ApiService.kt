@@ -17,6 +17,4 @@ interface ApiService{
         @Query("q") apiKey: String,
         @Query("key") city: String
     ): Response<ModelWeatherForecastResponse>
-
-
 }
